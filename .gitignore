@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+*.img
+*.iso
+*.img.gz
+*.img.xz
+*.safetensors
+*.ckpt
+*.gguf
+*.vhdx
+models/
+roms/
+bios/
+private/
+__pycache__/
