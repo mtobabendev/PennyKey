@@ -47,3 +47,6 @@ Additional-phone compatibility; Pi/PC installation and physical boot tests; pers
 - Ubuntu sees /dev/sde (128320801792 bytes) with the expected five partitions and matching PARTUUIDs. Linux reports serial 0374925110003055; Windows reports AA00000000000489. Match partition UUIDs and exact layout as well as capacity before writes.
 - Downloading official 2026-06-18 Raspberry Pi OS ARM64 desktop image. Published SHA256: 123287c05f27b0eebd8f65456f6369b8f6635fa50a3d440a4f9f6223bf58c8e2.
 - No OS write yet. Next: verify image hash, inspect first-boot behavior, deploy only Pi boot/root, replace filesystem references, and preserve partitions 1/3/5.
+
+## Active OS write
+The reduced Install-PiOS-WSL.sh is now writing only Pi root and boot. It removes automatic whole-disk growth, updates PARTUUID references, and configures shared storage mounting. It does not enable SSH, install keys, or customize the desktop. Fresh desktop account setup remains for first boot. Completion checks are still running; do not re-run the destructive script.
