@@ -1,0 +1,8 @@
+INSTALL COPY VERIFIED: Pi boot/root written; partition table and shared files unchanged. Physical boot and desktop setup pending.
+NAME           SIZE FSTYPE LABEL       PARTUUID
+sde    128320801792                    
+├─sde1  21474836480 exfat  PennyKey    1358da45-6a02-4a4f-a75b-ebd22b7bcef2
+├─sde2   1073741824 vfat   PENNYPIBOOT a01eec10-2c8a-4b26-91bc-8e8d92947201
+├─sde3   1073741824 vfat   PENNYEFI    8ac4e0da-8d9f-4ccf-8036-c4ac18b7ef40
+├─sde4  34359738368 ext4   PENNYPIROOT c34f54dc-90f0-4f25-bc48-32243300d422
+└─sde5  70337429504                    db99bc11-9ba5-4e7e-bf7d-bc8a79ef7195

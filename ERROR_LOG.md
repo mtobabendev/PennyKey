@@ -21,3 +21,6 @@
 - Removed those extras. The next attempt was rejected because the approval service reported a usage limit; it did not execute.
 - User explicitly requested retry. The reduced script was approved, then stopped before writes because WSL had lost its USB attachment and source mounts during the interruption.
 - Recovery: kept the Ubuntu VM running with a temporary helper, reattached Samsung USB, restored source mounts. Pi root write began successfully. No further SSH setup needed for this installation.
+
+## Recovery outcome
+The reduced Windows-side Pi installation completed successfully. Source checksum, boot-file copy, filesystem check, partition table preservation, and shared-file preservation passed. USB returned from WSL. Physical boot remains pending; no changes were made to the active Pi SD card.
