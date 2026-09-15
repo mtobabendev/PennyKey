@@ -1,6 +1,6 @@
 # PennyKey status
 ## Current stage
-Stage 2: partition creation and Windows verification complete; awaiting actual Android phone file-transfer test before Linux installation.
+Stage 3: preparing Pi Linux installation. Stage 2 completed: Windows verification passed and user confirmed Android files copied successfully.
 
 ## Verified
 - Stage 1 requirements/rules pushed to origin/main in commit 0d4c12e.
@@ -24,8 +24,14 @@ Shared volume reports Healthy, filesystem size 21470642176 bytes; formatting met
 - Scripts preserved as build records. Complete-PennyKeyPartitions.ps1 is a one-time recovery script for the old two-partition state and must not be run against the completed layout.
 - Initialize-PennyKey.ps1 is destructive; do not rerun on this completed USB. Its EFI step was updated to match the successful recovery method; revised full script has not been rerun end-to-end.
 
-## Next step: user physical test
+## Completed Android checkpoint
 Safely eject the USB from Windows, connect it to an Android phone using the appropriate USB adapter, copy a small file from the phone to PennyKey, and open the copied file from the USB. Report which phone and whether it worked. Repeat on other intended phones when available. If Android offers to format the USB, cancel and report it; formatting would erase the prepared layout.
 
 ## Pending
-Android compatibility; Pi/PC installation and physical boot tests; persistent wallpaper/lock screen; Penny applications; emulators/controllers/saves; ComfyUI; future Pi 5 and NVIDIA laptop verification.
+Additional-phone compatibility; Pi/PC installation and physical boot tests; persistent wallpaper/lock screen; Penny applications; emulators/controllers/saves; ComfyUI; future Pi 5 and NVIDIA laptop verification.
+
+## 2026-09-15 installation preparation
+- User confirmed Android file transfer works. Windows now sees Screenshot_20260520_221157_Nova Launcher.jpg on the shared partition (1443638 bytes). Contents not inspected.
+- Ubuntu WSL2 installed; USB passthrough utility usbipd not found on PATH. Windows C: has approximately 15.57 GiB free.
+- Current next step: establish Linux access to the USB, preferably through the existing Pi if available, or USB/IP with WSL. Preserve the shared partition and Android file.
+
