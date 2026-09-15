@@ -35,3 +35,8 @@ Additional-phone compatibility; Pi/PC installation and physical boot tests; pers
 - Ubuntu WSL2 installed; USB passthrough utility usbipd not found on PATH. Windows C: has approximately 15.57 GiB free.
 - Current next step: establish Linux access to the USB, preferably through the existing Pi if available, or USB/IP with WSL. Preserve the shared partition and Android file.
 
+
+## Installation handoff clarification
+- Pi is reachable at user-provided address; SSH password service works, but key authorization is unresolved. No authenticated remote session established.
+- User is actively configuring RetroArch/controllers on the Pi SD card. Preserve that system; no cloning or modification authorized by the USB installation scope.
+- Fresh OS deployment into USB partitions is the intended method. Explain and agree the physical handoff before proceeding; do not ask user to enable already-running SSH.
