@@ -40,3 +40,10 @@ Additional-phone compatibility; Pi/PC installation and physical boot tests; pers
 - Pi is reachable at user-provided address; SSH password service works, but key authorization is unresolved. No authenticated remote session established.
 - User is actively configuring RetroArch/controllers on the Pi SD card. Preserve that system; no cloning or modification authorized by the USB installation scope.
 - Fresh OS deployment into USB partitions is the intended method. Explain and agree the physical handoff before proceeding; do not ask user to enable already-running SSH.
+
+## Windows-side installation route (authorized)
+- User requested keeping USB on Windows and avoiding Pi command entry. Use Ubuntu WSL2 plus usbipd-win; no SSH required.
+- usbipd-win 5.3.0 installed successfully. Samsung 04e8:6300 at bus 1-7 attached to Ubuntu.
+- Ubuntu sees /dev/sde (128320801792 bytes) with the expected five partitions and matching PARTUUIDs. Linux reports serial 0374925110003055; Windows reports AA00000000000489. Match partition UUIDs and exact layout as well as capacity before writes.
+- Downloading official 2026-06-18 Raspberry Pi OS ARM64 desktop image. Published SHA256: 123287c05f27b0eebd8f65456f6369b8f6635fa50a3d440a4f9f6223bf58c8e2.
+- No OS write yet. Next: verify image hash, inspect first-boot behavior, deploy only Pi boot/root, replace filesystem references, and preserve partitions 1/3/5.
